@@ -1,0 +1,804 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <link rel="icon" type="image/png" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg">       
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>French Study Guide</title>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#3b82f6">
+        <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/197/197395.png">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap');
+            
+            body {
+                font-family: 'Nunito', sans-serif;
+                background-color: #f3f4f6;
+            }
+
+            .tab-btn.active {
+                background-color: #3b82f6;
+                color: white;
+                border-color: #3b82f6;
+            }
+
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
+        </style>
+    </head>
+    <body class="text-gray-800">
+
+        <!-- Header -->
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <i class="fas fa-tower-eiffel text-blue-600 text-2xl mr-3"></i>
+                        <h1 class="text-xl font-bold text-gray-900 tracking-tight">Français <span class="text-blue-600">Study Guide</span></h1>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden">
+                        <button onclick="toggleMobileMenu()" class="text-gray-500 hover:text-blue-600 focus:outline-none">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                    <!-- Desktop Nav -->
+                    <nav class="hidden md:flex space-x-2">
+                        <button onclick="switchTab('writing')" class="tab-btn active px-4 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 hover:bg-gray-100">Grammar & Pronunciation</button>
+                        <button onclick="switchTab('vocab')" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors text-gray-600 hover:bg-gray-100">Vocabulary</button>
+                    </nav>
+                </div>
+            </div>
+            <!-- Mobile Nav Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <button onclick="switchTab('writing'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Grammar & Pronunciation</button>
+                    <button onclick="switchTab('vocab'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Vocabulary</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+            <!-- TAB 1: GRAMMAR & PRONUNCIATION -->
+            <div id="writing-tab" class="tab-content space-y-8 animate-fade-in">
+                
+                <!-- French Pronunciation -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                    <h2 class="text-lg font-bold text-blue-600 mb-4 flex items-center"><i class="fas fa-volume-up mr-2"></i>French Pronunciation Guide</h2>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                        <div class="border-l-4 border-blue-400 pl-4">
+                            <p class="font-bold mb-2">Vowels</p>
+                            <div class="space-y-1">
+                                <div class="flex justify-between"><span>A</span> <span>Like "a" in father</span></div>
+                                <div class="flex justify-between"><span>E</span> <span>Like "e" in best</span></div>
+                                <div class="flex justify-between"><span>I</span> <span>Like "ee" in see</span></div>
+                                <div class="flex justify-between"><span>O</span> <span>Like "o" in go</span></div>
+                                <div class="flex justify-between"><span>U</span> <span>Like "oo" in moon</span></div>
+                                <div class="flex justify-between"><span>Y</span> <span>Like "ee" in see</span></div>
+                            </div>
+                        </div>
+                        <div class="border-l-4 border-orange-400 pl-4">
+                            <p class="font-bold mb-2">Common Consonants</p>
+                            <div class="space-y-1">
+                                <div class="flex justify-between"><span>C (before e/i)</span> <span>Like "s"</span></div>
+                                <div class="flex justify-between"><span>C (before a/o)</span> <span>Like "k"</span></div>
+                                <div class="flex justify-between"><span>G (before e/i)</span> <span>Like "zh"</span></div>
+                                <div class="flex justify-between"><span>G (before a/o)</span> <span>Like "g"</span></div>
+                                <div class="flex justify-between"><span>J</span> <span>Like "zh"</span></div>
+                                <div class="flex justify-between"><span>H</span> <span>Always silent</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Verb Conjugation -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mt-8">
+                    <h3 class="font-bold text-gray-800 mb-4">Present Tense Regular Verbs (-ER, -IR, -RE)</h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="border-l-4 border-red-400 pl-4">
+                            <p class="font-bold text-red-600 mb-2">-ER Verbs (parler)</p>
+                            <div class="space-y-1 text-sm">
+                                <div>Je parle</div>
+                                <div>Tu parles</div>
+                                <div>Il/Elle parle</div>
+                                <div>Nous parlons</div>
+                                <div>Vous parlez</div>
+                                <div>Ils/Elles parlent</div>
+                            </div>
+                        </div>
+                        <div class="border-l-4 border-green-400 pl-4">
+                            <p class="font-bold text-green-600 mb-2">-IR Verbs (finir)</p>
+                            <div class="space-y-1 text-sm">
+                                <div>Je finis</div>
+                                <div>Tu finis</div>
+                                <div>Il/Elle finit</div>
+                                <div>Nous finissons</div>
+                                <div>Vous finissez</div>
+                                <div>Ils/Elles finissent</div>
+                            </div>
+                        </div>
+                        <div class="border-l-4 border-blue-400 pl-4">
+                            <p class="font-bold text-blue-600 mb-2">-RE Verbs (vendre)</p>
+                            <div class="space-y-1 text-sm">
+                                <div>Je vends</div>
+                                <div>Tu vends</div>
+                                <div>Il/Elle vend</div>
+                                <div>Nous vendons</div>
+                                <div>Vous vendez</div>
+                                <div>Ils/Elles vendent</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sentence Structure -->
+                <div class="bg-indigo-900 rounded-xl shadow-lg text-white p-8">
+                    <h2 class="text-2xl font-bold mb-6">Basic Sentence Structure</h2>
+                    <div class="space-y-4">
+                        <div class="bg-indigo-800 p-4 rounded-lg">
+                            <p class="text-sm text-indigo-300 mb-1">Subject + Verb + Object + Adverbial</p>
+                            <p class="text-lg font-bold">Je parle français tous les jours.</p>
+                            <p class="text-indigo-200 text-sm mt-1">(I speak French every day.)</p>
+                        </div>
+                        <div class="bg-indigo-800 p-4 rounded-lg">
+                            <p class="text-sm text-indigo-300 mb-1">With Adjectives</p>
+                            <p class="text-lg font-bold">Le chat noir dort sur le canapé.</p>
+                            <p class="text-indigo-200 text-sm mt-1">(The black cat sleeps on the couch.)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- La negation -->
+                <div class="bg-gray-800 text-white p-6 rounded-xl mt-8">
+                    <h3 class="text-xl font-bold text-yellow-400 mb-4">La Négation Sandwich 🥪</h3>
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-2xl font-bold">
+                        <span class="text-red-400">NE</span>
+                        <span class="bg-white text-black px-4 py-1 rounded">VERBE</span>
+                        <span class="text-red-400">PAS</span>
+                    </div>
+                    <p class="text-center mt-4 italic">Je <b>ne</b> parle <b>pas</b> français. (I don't speak French)</p>
+                    <p class="text-center text-xs text-gray-400 mt-2">* Use <b>n'</b> before a vowel: Je <b>n'</b>ai <b>pas</b>.</p>
+                </div>
+
+            </div>
+
+            <!-- TAB 2: VOCABULARY -->
+            <div id="vocab-tab" class="tab-content hidden space-y-8 animate-fade-in">
+
+                <!-- Essential Expressions -->
+                <div class="bg-emerald-50 rounded-xl p-8">
+                    <h3 class="text-xl font-bold text-emerald-800 mb-4">Essential Expressions</h3>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-white p-3 rounded shadow-sm border border-emerald-100">
+                            <div class="text-xs text-gray-500 mb-1">Good Morning</div>
+                            <div class="font-bold text-lg text-emerald-700">Bonjour</div>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm border border-emerald-100">
+                            <div class="text-xs text-gray-500 mb-1">Good Evening</div>
+                            <div class="font-bold text-lg text-emerald-700">Bonsoir</div>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm border border-emerald-100">
+                            <div class="text-xs text-gray-500 mb-1">Thank you</div>
+                            <div class="font-bold text-lg text-emerald-700">Merci</div>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm border border-emerald-100">
+                            <div class="text-xs text-gray-500 mb-1">Excuse me/Sorry</div>
+                            <div class="font-bold text-lg text-emerald-700">Pardon / Excusez-moi</div>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm border border-emerald-100">
+                            <div class="text-xs text-gray-500 mb-1">Please</div>
+                            <div class="font-bold text-lg text-emerald-700">S'il vous plaît</div>
+                        </div>
+                        <div class="bg-white p-3 rounded shadow-sm border border-emerald-100">
+                            <div class="text-xs text-gray-500 mb-1">Goodbye</div>
+                            <div class="font-bold text-lg text-emerald-700">Au revoir</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Numbers & Time -->
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2">Basics: Numbers & Time</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg shadow-sm p-6 card-hover">
+                        <h4 class="font-bold text-blue-600 mb-3">Numbers (Nombres)</h4>
+                        <div class="grid grid-cols-2 gap-2 text-sm">
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>0</span> <span class="font-bold">Zéro</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>1</span> <span class="font-bold">Un/Une</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>2</span> <span class="font-bold">Deux</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>3</span> <span class="font-bold">Trois</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>4</span> <span class="font-bold">Quatre</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>5</span> <span class="font-bold">Cinq</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>6</span> <span class="font-bold">Six</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>7</span> <span class="font-bold">Sept</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>8</span> <span class="font-bold">Huit</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>9</span> <span class="font-bold">Neuf</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>10</span> <span class="font-bold">Dix</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>20</span> <span class="font-bold">Vingt</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>30</span> <span class="font-bold">Trente</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>40</span> <span class="font-bold">Quarante</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>50</span> <span class="font-bold">Cinquante</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>60</span> <span class="font-bold">Soixante</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>70</span> <span class="font-bold">Soixante-Dix</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>80</span> <span class="font-bold">Quatre-vingts</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>90</span> <span class="font-bold">Quatre-vingt-dix</span></div>
+                            <div class="flex justify-between border-b border-gray-100 py-1"><span>100</span> <span class="font-bold">Cent</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-6 card-hover">
+                        <h4 class="font-bold text-blue-600 mb-3">Time & Days</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="font-semibold text-gray-600 text-xs mt-2">Days of Week</div>
+                            <div class="flex justify-between py-1"><span>Monday</span> <span class="font-bold">Lundi</span></div>
+                            <div class="flex justify-between py-1"><span>Tuesday</span> <span class="font-bold">Mardi</span></div>
+                            <div class="flex justify-between py-1"><span>Wednesday</span> <span class="font-bold">Mercredi</span></div>
+                            <div class="flex justify-between py-1"><span>Thursday</span> <span class="font-bold">Jeudi</span></div>
+                            <div class="flex justify-between py-1"><span>Friday</span> <span class="font-bold">Vendredi</span></div>
+                            <div class="flex justify-between py-1"><span>Saturday</span> <span class="font-bold">Samedi</span></div>
+                            <div class="flex justify-between py-1"><span>Sunday</span> <span class="font-bold">Dimanche</span></div>
+                            <br>
+                            <div class="font-semibold text-gray-600 text-xs mt-3">Time of Day</div>
+                            <div class="flex justify-between py-1"><span>Morning</span> <span class="font-bold">Matin</span></div>
+                            <div class="flex justify-between py-1"><span>Afternoon</span> <span class="font-bold">Après-midi</span></div>
+                            <div class="flex justify-between py-1"><span>Night</span> <span class="font-bold">Nuit</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Months -->
+                <div class="bg-white rounded-lg shadow-sm p-6 card-hover border-l-4 border-red-500 mt-4">
+                    <h4 class="font-bold text-red-600 mb-3">Months (Mois)</h4>
+                    <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                        <div class="flex justify-between py-1 border-b"><span>January</span> <span class="font-bold">Janvier</span></div>
+                        <div class="flex justify-between py-1 border-b"><span>February</span> <span class="font-bold">Février</span></div>
+                        <div class="flex justify-between py-1 border-b"><span>March</span> <span class="font-bold">Mars</span></div>
+                        <div class="flex justify-between py-1 border-b"><span>April</span> <span class="font-bold">Avril</span></div>
+                        <div class="flex justify-between py-1 border-b"><span>May</span> <span class="font-bold">Mai</span></div>
+                        <div class="flex justify-between py-1 border-b"><span>June</span> <span class="font-bold">Juin</span></div>
+                        <div class="flex justify-between py-1 border-b"><span>July</span> <span class="font-bold">Juillet</span></div>
+                        <div class="flex justify-between py-1 border-b"><span>August</span> <span class="font-bold">Août</span></div>
+                        <div class="flex justify-between py-1 border-b"><span>September</span> <span class="font-bold">Septembre</span></div>
+                        <div class="flex justify-between py-1 border-b"><span>October</span> <span class="font-bold">Octobre</span></div>
+                        <div class="flex justify-between py-1 border-b"><span>November</span> <span class="font-bold">Novembre</span></div>
+                        <div class="flex justify-between py-1"><span>December</span> <span class="font-bold">Décembre</span></div>
+                    </div>
+                </div>
+
+                <!-- Temp relatif -->
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">Matrice du Temps Relatif (Relative Time)</h3>
+                <div class="grid md:grid-cols-3 gap-6 mt-4">
+                    
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600 card-hover">
+                        <h4 class="font-bold text-blue-700 mb-3 underline decoration-2">Les Jours (Days)</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>The day before yesterday</span> <span class="font-bold text-red-600">Avant-hier</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Yesterday</span> <span class="font-bold">Hier</span></div>
+                            <div class="flex justify-between py-1 border-b bg-blue-50 px-1 rounded"><span>Today</span> <span class="font-bold text-blue-700">Aujourd'hui</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Tomorrow</span> <span class="font-bold">Demain</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>The day after tomorrow</span> <span class="font-bold text-green-600">Après-demain</span></div>
+                            <div class="flex justify-between py-1"><span>Every day</span> <span class="font-bold">Chaque jour / Tous les jours</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-gray-400 card-hover">
+                        <h4 class="font-bold text-gray-600 mb-3 underline decoration-2">Les Semaines (Weeks)</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>The week before last</span> <span class="font-bold">La semaine d'avant</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Last week</span> <span class="font-bold">La semaine dernière</span></div>
+                            <div class="flex justify-between py-1 border-b bg-blue-50 px-1 rounded"><span>This week</span> <span class="font-bold text-blue-700">Cette semaine</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Next week</span> <span class="font-bold">La semaine prochaine</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>The week after next</span> <span class="font-bold">Dans deux semaines</span></div>
+                            <div class="flex justify-between py-1"><span>Every week</span> <span class="font-bold">Chaque semaine</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-red-600 card-hover">
+                        <h4 class="font-bold text-red-600 mb-3 underline decoration-2">Mois et Ans</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Last month</span> <span class="font-bold">Le mois dernier</span></div>
+                            <div class="flex justify-between py-1 border-b bg-blue-50 px-1 rounded"><span>This month</span> <span class="font-bold text-blue-700">Ce mois-ci</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Next month</span> <span class="font-bold">Le mois prochain</span></div>
+                            <hr class="my-2">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Last year</span> <span class="font-bold">L'année dernière</span></div>
+                            <div class="flex justify-between py-1 border-b bg-blue-50 px-1 rounded"><span>This year</span> <span class="font-bold text-blue-700">Cette année</span></div>
+                            <div class="flex justify-between py-1"><span>Next year</span> <span class="font-bold">L'année prochaine</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Places & Transportation -->
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">Places & Travel</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg shadow-sm p-6 card-hover">
+                        <h4 class="font-bold text-red-600 mb-3">Essential Places</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>Post Office</span> <span class="font-bold text-lg">La Poste</span></div>
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>Bank</span> <span class="font-bold text-lg">Banque</span></div>
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>Hospital</span> <span class="font-bold text-lg">Hôpital</span></div>
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>Police Station</span> <span class="font-bold text-lg">Commissariat</span></div>
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>City Hall</span> <span class="font-bold text-lg">Mairie</span></div>
+                            <div class="flex justify-between py-1"><span>Station</span> <span class="font-bold text-lg">Gare</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6 card-hover">
+                        <h4 class="font-bold text-green-600 mb-3">Transportation (Transport)</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>Train</span> <span class="font-bold text-lg">Train</span></div>
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>Subway</span> <span class="font-bold text-lg">Métro</span></div>
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>Bus</span> <span class="font-bold text-lg">Bus</span></div>
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>Taxi</span> <span class="font-bold text-lg">Taxi</span></div>
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>Bicycle</span> <span class="font-bold text-lg">Vélo</span></div>
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>Car</span> <span class="font-bold text-lg">Voiture</span></div>
+                            <div class="flex justify-between border-b border-gray-50 py-1"><span>Airplane</span> <span class="font-bold text-lg">Avion</span></div>
+                            <div class="flex justify-between py-1"><span>Ticket</span> <span class="font-bold text-lg">Billet</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Life -->
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">La Vie Quotidienne (Daily Life)</h3>
+                <div class="grid md:grid-cols-3 gap-6 mt-4">
+                    <div class="bg-white rounded-lg shadow-sm p-6 card-hover border-t-4 border-red-500">
+                        <h4 class="font-bold text-red-600 mb-3">La Cuisine (Kitchen)</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Refrigerator</span> <span class="font-bold">Le frigo</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Stove</span> <span class="font-bold">La cuisinière</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Microwave</span> <span class="font-bold">Le micro-ondes</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Pot</span> <span class="font-bold">La casserole</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Pan</span> <span class="font-bold">La poêle</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Knife</span> <span class="font-bold">Le couteau</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Spoon</span> <span class="font-bold">La cuillère</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Fork</span> <span class="font-bold">La fourchette</span></div>
+                            <div class="flex justify-between py-1"><span>Plate</span> <span class="font-bold">L'assiette (f)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-6 card-hover border-t-4 border-blue-500">
+                        <h4 class="font-bold text-blue-600 mb-3">L'École (School)</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Student</span> <span class="font-bold">L'étudiant(e)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Teacher</span> <span class="font-bold">Le professeur</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Homework</span> <span class="font-bold">Les devoirs (m)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Exam</span> <span class="font-bold">L'examen (m)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Classroom</span> <span class="font-bold">La salle de classe</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Book</span> <span class="font-bold">Le livre</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Cafeteria</span> <span class="font-bold">La cantine</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Dictionary</span> <span class="font-bold">Le dictionnaire</span></div>
+                            <div class="flex justify-between py-1"><span>University</span> <span class="font-bold">L'université (f)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-6 card-hover border-t-4 border-gray-500">
+                        <h4 class="font-bold text-gray-600 mb-3">Le Travail (Work)</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Company</span> <span class="font-bold">L'entreprise (f)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Meeting</span> <span class="font-bold">La réunion</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Telephone</span> <span class="font-bold">Le téléphone</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Computer</span> <span class="font-bold">L'ordinateur (m)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Email</span> <span class="font-bold">L'e-mail / Le courriel</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Office</span> <span class="font-bold">Le bureau</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Report</span> <span class="font-bold">Le rapport</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>Document</span> <span class="font-bold">Le document</span></div>
+                            <div class="flex justify-between py-1"><span>Letter</span> <span class="font-bold">La lettre</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">Les Vêtements et Accessoires (Clothing)</h3>
+                <div class="grid md:grid-cols-2 gap-6 mt-4">
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-500">
+                        <h4 class="font-bold text-blue-600 mb-2 italic">Masculin (Le / Un)</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b"><span>Pants</span> <b>Le pantalon</b></div>
+                            <div class="flex justify-between py-1 border-b"><span>Hat</span> <b>Le chapeau</b></div>
+                            <div class="flex justify-between py-1 border-b"><span>Coat</span> <b>Le manteau</b></div>
+                            <div class="flex justify-between py-1 border-b"><span>Pullover/Sweater</span> <b>Le pull</b></div>
+                            <div class="flex justify-between py-1"><span>Suit</span> <b>Le costume</b></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-red-500">
+                        <h4 class="font-bold text-red-600 mb-2 italic">Féminin (La / Une)</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b"><span>Dress</span> <b>La robe</b></div>
+                            <div class="flex justify-between py-1 border-b"><span>Shirt (Button-up)</span> <b>La chemise</b></div>
+                            <div class="flex justify-between py-1 border-b"><span>Skirt</span> <b>La jupe</b></div>
+                            <div class="flex justify-between py-1 border-b"><span>Tie</span> <b>La cravate</b></div>
+                            <div class="flex justify-between py-1"><span>Belt</span> <b>La ceinture</b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- City & Buildings -->
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">City & Buildings</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-yellow-500">
+                        <h4 class="font-bold text-yellow-600 mb-2">Shops (Magasins)</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b"><span>Bakery</span> <span class="font-bold">Boulangerie</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Bookstore</span> <span class="font-bold">Librairie</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Butcher</span> <span class="font-bold">Boucherie</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Fishmonger</span> <span class="font-bold">Poissonnerie</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Pharmacy</span> <span class="font-bold">Pharmacie</span></div>
+                            <div class="flex justify-between py-1"><span>Florist</span> <span class="font-bold">Fleuriste</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-green-500">
+                        <h4 class="font-bold text-green-600 mb-2">Culture & Leisure</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b"><span>Library</span> <span class="font-bold">Bibliothèque</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Museum</span> <span class="font-bold">Musée</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Theater</span> <span class="font-bold">Théâtre</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Park</span> <span class="font-bold">Parc</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Cinema</span> <span class="font-bold">Cinéma</span></div>
+                            <div class="flex justify-between py-1"><span>Restaurant</span> <span class="font-bold">Restaurant</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-500">
+                        <h4 class="font-bold text-blue-600 mb-2">Modern Conveniences</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b"><span>Convenience Store</span> <span class="font-bold">Convenience</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Supermarket</span> <span class="font-bold">Supermarché</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Dept. Store</span> <span class="font-bold">Grand Magasin</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Hotel</span> <span class="font-bold">Hôtel</span></div>
+                            <div class="flex justify-between py-1 border-b"><span>Parking</span> <span class="font-bold">Parking</span></div>
+                            <div class="flex justify-between py-1"><span>Gas Station</span> <span class="font-bold">Station-service</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Verbs -->
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">Liste Complète des Verbes (Full Verb List)</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                    
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-600">
+                        <h4 class="font-bold text-blue-600 mb-2">Mouvement et Transport</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To go</span> <span class="font-bold">Aller (je vais)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To come</span> <span class="font-bold">Venir (je viens)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To return</span> <span class="font-bold">Rentrer (je rentre)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To walk</span> <span class="font-bold">Marcher (je marche)</span></div>
+                            <div class="flex justify-between py-1"><span>To run</span> <span class="font-bold">Courir (je cours)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-gray-400">
+                        <h4 class="font-bold text-gray-600 mb-2">Donner et Recevoir</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To give</span> <span class="font-bold">Donner (je donne)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To receive</span> <span class="font-bold">Recevoir (je reçois)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To lend</span> <span class="font-bold">Prêter (je prête)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To borrow</span> <span class="font-bold">Emprunter</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To teach</span> <span class="font-bold">Enseigner</span></div>
+                            <div class="flex justify-between py-1"><span>To learn</span> <span class="font-bold">Apprendre (j'apprends)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-red-600">
+                        <h4 class="font-bold text-red-600 mb-2">La Vie Quotidienne</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To wake up</span> <span class="font-bold">Se réveiller</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To sleep</span> <span class="font-bold">Dormir (je dors)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To work</span> <span class="font-bold">Travailler</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To study</span> <span class="font-bold">Étudier</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To rest</span> <span class="font-bold">Se reposer</span></div>
+                            <div class="flex justify-between py-1"><span>To finish</span> <span class="font-bold">Finir (je finis)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-400">
+                        <h4 class="font-bold text-blue-500 mb-2">Activités</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To eat</span> <span class="font-bold">Manger</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To drink</span> <span class="font-bold">Boire (je bois)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To watch</span> <span class="font-bold">Regarder</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To listen</span> <span class="font-bold">Écouter</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To read</span> <span class="font-bold">Lire (je lis)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To write</span> <span class="font-bold">Écrire (j'écris)</span></div>
+                            <div class="flex justify-between py-1"><span>To buy</span> <span class="font-bold">Acheter (j'achète)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-gray-300">
+                        <h4 class="font-bold text-gray-500 mb-2">Social</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To meet</span> <span class="font-bold">Rencontrer</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To speak</span> <span class="font-bold">Parler</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To call</span> <span class="font-bold">Appeler</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To take (photo)</span> <span class="font-bold">Prendre (une photo)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To send</span> <span class="font-bold">Envoyer</span></div>
+                            <div class="flex justify-between py-1"><span>To understand</span> <span class="font-bold">Comprendre</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-red-400">
+                        <h4 class="font-bold text-red-500 mb-2">L'Existence</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To be</span> <span class="font-bold">Être (je suis)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To have</span> <span class="font-bold">Avoir (j'ai)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To stay/remain</span> <span class="font-bold">Rester</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To cost</span> <span class="font-bold">Coûter</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-blue-800">
+                        <h4 class="font-bold text-blue-800 mb-2">Cuisine et Cuisson</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To cook</span> <span class="font-bold">Cuisiner</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To cut</span> <span class="font-bold">Couper</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To boil</span> <span class="font-bold">Bouillir</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To fry</span> <span class="font-bold">Frire</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To grill/bake</span> <span class="font-bold">Cuire au four</span></div>
+                            <div class="flex justify-between py-1"><span>To mix</span> <span class="font-bold">Mélanger</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-slate-400">
+                        <h4 class="font-bold text-slate-600 mb-2">Ménage et Entretien</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To wash</span> <span class="font-bold">Laver</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To clean</span> <span class="font-bold">Nettoyer</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To dry</span> <span class="font-bold">Sécher</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To iron</span> <span class="font-bold">Repasser</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To fix/repair</span> <span class="font-bold">Réparer</span></div>
+                            <div class="flex justify-between py-1"><span>To throw away</span> <span class="font-bold">Jeter (je jette)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm p-4 border-l-4 border-red-800">
+                        <h4 class="font-bold text-red-800 mb-2">États Physiques et Mentaux</h4>
+                        <div class="space-y-1 text-sm">
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To hurt</span> <span class="font-bold">Faire mal</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To feel</span> <span class="font-bold">Sentir (je sens)</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To think</span> <span class="font-bold">Penser</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To remember</span> <span class="font-bold">Se souvenir</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To forget</span> <span class="font-bold">Oublier</span></div>
+                            <div class="flex justify-between py-1 border-b border-gray-50"><span>To worry</span> <span class="font-bold">S'inquiéter</span></div>
+                            <div class="flex justify-between py-1"><span>To relax</span> <span class="font-bold">Se détendre</span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Family & Colors -->
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">Family & Colors</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg shadow-sm p-6 card-hover">
+                        <h4 class="font-bold text-pink-600 mb-3">Family (Famille)</h4>
+                        <div class="grid grid-cols-2 gap-x-4 text-sm">
+                            <div class="flex justify-between border-b py-1"><span>Father</span> <span class="font-bold">Père</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Mother</span> <span class="font-bold">Mère</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Brother</span> <span class="font-bold">Frère</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Sister</span> <span class="font-bold">Sœur</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Grandfather</span> <span class="font-bold">Grand-père</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Grandmother</span> <span class="font-bold">Grand-mère</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Uncle</span> <span class="font-bold">Oncle</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Aunt</span> <span class="font-bold">Tante</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Cousin</span> <span class="font-bold">Cousin(e)</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Son</span> <span class="font-bold">Fils</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Daughter</span> <span class="font-bold">Fille</span></div>
+                            <div class="flex justify-between py-1"><span>Husband/Wife</span> <span class="font-bold">Époux/Épouse</span></div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm p-6 card-hover">
+                        <h4 class="font-bold text-indigo-600 mb-3">Colors (Couleurs)</h4>
+                        <div class="grid grid-cols-2 gap-x-4 text-sm">
+                            <div class="flex justify-between border-b py-1"><span>Red</span> <span class="font-bold">Rouge</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Blue</span> <span class="font-bold">Bleu</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Black</span> <span class="font-bold">Noir</span></div>
+                            <div class="flex justify-between border-b py-1"><span>White</span> <span class="font-bold">Blanc</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Yellow</span> <span class="font-bold">Jaune</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Green</span> <span class="font-bold">Vert</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Purple</span> <span class="font-bold">Violet</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Pink</span> <span class="font-bold">Rose</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Orange</span> <span class="font-bold">Orange</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Brown</span> <span class="font-bold">Marron</span></div>
+                            <div class="flex justify-between border-b py-1"><span>Gray</span> <span class="font-bold">Gris</span></div>
+                            <div class="flex justify-between py-1"><span>Gold</span> <span class="font-bold">Or</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prépositions de Lieu -->
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">Prépositions de Lieu (Location)</h3>
+                <div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+                        <div class="p-3 bg-white rounded border-b-2 border-blue-600 shadow-sm">
+                            <p class="text-xs text-gray-500">Above (On) / Under</p>
+                            <p class="font-bold text-lg">Sur / Sous</p>
+                            <p class="text-xs font-mono text-blue-600">Sur / Soo</p>
+                        </div>
+                        <div class="p-3 bg-white rounded border-b-2 border-gray-400 shadow-sm">
+                            <p class="text-xs text-gray-500">In front / Behind</p>
+                            <p class="font-bold text-lg">Devant / Derrière</p>
+                            <p class="text-xs font-mono text-gray-500">Duh-von / Deh-ryehr</p>
+                        </div>
+                        <div class="p-3 bg-white rounded border-b-2 border-red-600 shadow-sm">
+                            <p class="text-xs text-gray-500">Right / Left</p>
+                            <p class="font-bold text-lg">À droite / À gauche</p>
+                            <p class="text-xs font-mono text-red-600">Ah drwat / Ah gosh</p>
+                        </div>
+                        <div class="p-3 bg-white rounded border-b-2 border-yellow-500 shadow-sm">
+                            <p class="text-xs text-gray-500">Inside / Outside</p>
+                            <p class="font-bold text-lg">Dans / Dehors</p>
+                            <p class="text-xs font-mono text-yellow-600">Don / Duh-ohr</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                        <div class="p-3 bg-white rounded border-l-4 border-blue-400 shadow-sm">
+                            <p class="text-xs text-gray-500">Next to / Beside</p>
+                            <p class="font-bold">À côté de</p>
+                            <p class="text-xs font-mono text-gray-500">Ah koh-tay duh</p>
+                        </div>
+                        <div class="p-3 bg-white rounded border-l-4 border-gray-400 shadow-sm">
+                            <p class="text-xs text-gray-500">Nearby / Close to</p>
+                            <p class="font-bold">Près de</p>
+                            <p class="text-xs font-mono text-gray-500">Preh duh</p>
+                        </div>
+                        <div class="p-3 bg-white rounded border-l-4 border-red-400 shadow-sm">
+                            <p class="text-xs text-gray-500">Between</p>
+                            <p class="font-bold">Entre</p>
+                            <p class="text-xs font-mono text-gray-500">Ont-ruh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 p-4 bg-blue-50 border border-blue-100 rounded-lg text-sm">
+                    <p class="font-bold text-blue-800 mb-1">💡 DELF A1 Tip:</p>
+                    <p>In French, we use <strong>Être</strong> to describe location:</p>
+                    <p class="italic mt-1">"Le chat est <strong>sur</strong> la table." (The cat is on the table)</p>
+                </div>
+                
+                <!-- La Fréquence -->
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">La Fréquence (How often?)</h3>
+                <div class="bg-white rounded-xl shadow-sm border p-6 mt-4">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold w-12">0%</span>
+                            <div class="flex-1 h-4 bg-gray-200 rounded-full overflow-hidden flex">
+                                <div class="h-full bg-red-400" style="width: 20%"></div>
+                                <div class="h-full bg-orange-400" style="width: 20%"></div>
+                                <div class="h-full bg-yellow-400" style="width: 20%"></div>
+                                <div class="h-full bg-green-400" style="width: 40%"></div>
+                            </div>
+                            <span class="text-xs font-bold w-12 text-right">100%</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                            <div class="flex justify-between p-2 bg-red-50 rounded"><span>Never</span> <b class="text-red-700">Jamais</b></div>
+                            <div class="flex justify-between p-2 bg-orange-50 rounded"><span>Rarely</span> <b class="text-orange-700">Rarement</b></div>
+                            <div class="flex justify-between p-2 bg-yellow-50 rounded"><span>Sometimes</span> <b class="text-yellow-700">Parfois / Quelquefois</b></div>
+                            <div class="flex justify-between p-2 bg-blue-50 rounded"><span>Often</span> <b class="text-blue-700">Souvent</b></div>
+                            <div class="flex justify-between p-2 bg-green-50 rounded"><span>Usually</span> <b class="text-green-700">D'habitude</b></div>
+                            <div class="flex justify-between p-2 bg-green-100 rounded"><span>Always</span> <b class="text-green-800">Toujours</b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- L'Intensité -->
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">L'Intensité (To what degree?)</h3>
+                <div class="grid md:grid-cols-3 gap-4 mt-4">
+                    <div class="p-4 bg-white border-l-4 border-gray-300 rounded shadow-sm">
+                        <h4 class="font-bold text-gray-600 mb-2 text-xs">LOW</h4>
+                        <div class="flex justify-between"><span>A little</span> <b>Un peu</b></div>
+                        <p class="text-[10px] italic mt-1 text-gray-500">Ex: Je suis un peu fatigué.</p>
+                    </div>
+                    <div class="p-4 bg-white border-l-4 border-blue-400 rounded shadow-sm">
+                        <h4 class="font-bold text-blue-600 mb-2 text-xs">MEDIUM</h4>
+                        <div class="flex justify-between"><span>Quite/Enough</span> <b>Assez</b></div>
+                        <p class="text-[10px] italic mt-1 text-gray-500">Ex: C'est assez difficile.</p>
+                    </div>
+                    <div class="p-4 bg-white border-l-4 border-red-500 rounded shadow-sm">
+                        <h4 class="font-bold text-red-600 mb-2 text-xs">HIGH</h4>
+                        <div class="flex justify-between"><span>Very</span> <b>Très</b></div>
+                        <div class="flex justify-between border-t mt-1 pt-1"><span>A lot</span> <b>Beaucoup</b></div>
+                        <div class="flex justify-between border-t mt-1 pt-1"><span>Too much</span> <b>Trop</b></div>
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 bg-yellow-50 border-2 border-yellow-200 rounded-lg">
+                    <p class="font-bold text-yellow-800"><i class="fas fa-exclamation-triangle mr-2"></i>Attention : The "DE" Rule</p>
+                    <p class="text-sm text-yellow-900 mt-1">When adverbs of quantity (Beaucoup, Un peu, Trop) are followed by a noun, you <b>must</b> use <b>"de"</b> (or <b>d'</b> before a vowel).</p>
+                    <p class="text-sm italic font-mono mt-2 ml-4">Un peu <b>de</b> café | Trop <b>de</b> sucre | Beaucoup <b>d'</b>amis</p>
+                </div>
+
+
+                <!-- Le Corps Humain -->
+                <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mt-8">Le Corps Humain (The Body)</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 text-center">
+                    <div class="p-3 bg-white rounded-xl shadow-sm border-t-2 border-gray-800">
+                        <p class="text-xs text-gray-500">Head</p>
+                        <p class="font-bold">La tête</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border-t-2 border-gray-800">
+                        <p class="text-xs text-gray-500">Arm</p>
+                        <p class="font-bold">Le bras</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border-t-2 border-gray-800">
+                        <p class="text-xs text-gray-500">Hand</p>
+                        <p class="font-bold">La main</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border-t-2 border-gray-800">
+                        <p class="text-xs text-gray-500">Leg</p>
+                        <p class="font-bold">La jambe</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border-t-2 border-gray-800">
+                        <p class="text-xs text-gray-500">Foot</p>
+                        <p class="font-bold">Le pied</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border-t-2 border-gray-800">
+                        <p class="text-xs text-gray-500">Back</p>
+                        <p class="font-bold">Le dos</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border-t-2 border-gray-800">
+                        <p class="text-xs text-gray-500">Stomach</p>
+                        <p class="font-bold">Le ventre</p>
+                    </div>
+                    <div class="p-3 bg-white rounded-xl shadow-sm border-t-2 border-gray-800">
+                        <p class="text-xs text-gray-500">Eyes</p>
+                        <p class="font-bold">Les yeux</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-4 bg-red-50 border border-red-100 rounded-lg text-sm">
+                    <p class="font-bold text-red-800 mb-1">🆘 Expressing Pain (Avoir mal à...)</p>
+                    <p>Use <b>À la</b> (fem), <b>Au</b> (masc), or <b>Aux</b> (plural):</p>
+                    <ul class="list-disc ml-5 mt-2 italic">
+                        <li>J'ai mal <b>à la</b> tête (Headache)</li>
+                        <li>J'ai mal <b>au</b> dos (Backache)</li>
+                        <li>J'ai mal <b>aux</b> yeux (Eye pain)</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-gray-200 mt-12 py-8">
+            <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+                <p>French Study Helper</p>
+            </div>
+        </footer>
+
+        <script>
+            // Tab Switching Logic
+            function switchTab(tabId) {
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.add('hidden');
+                });
+                
+                document.getElementById(tabId + '-tab').classList.remove('hidden');
+
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.remove('active', 'bg-blue-600', 'text-white');
+                    btn.classList.add('text-gray-600', 'hover:bg-gray-100');
+                });
+
+                const activeBtns = document.querySelectorAll(`button[onclick="switchTab('${tabId}')"]`);
+                activeBtns.forEach(btn => {
+                    btn.classList.remove('text-gray-600', 'hover:bg-gray-100');
+                    btn.classList.add('active', 'bg-blue-600', 'text-white');
+                });
+            }
+
+            // Mobile Menu Toggle
+            function toggleMobileMenu() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            }
+        </script>
+    </body>
+    </html>
